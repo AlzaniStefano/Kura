@@ -22,7 +22,7 @@ const App = () => {
       <h1>Lista dei Post</h1>
       <ul>
         {posts.map(post => (
-          <li key={post.id}>{post.title}</li>
+          <li>{post.title}</li>
         ))}
       </ul>
     </div>

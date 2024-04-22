@@ -2,12 +2,13 @@
   "kind": "collectionType",
   "collectionName": "posts",
   "info": {
-    "name": "Post"
+    "name": "post",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -18,11 +19,11 @@
       "type": "richtext"
     },
     "Author": {
+      "model": "file",
+      "via": "related",
       "plugin": "upload",
-      "model": "file"
-    },
-    "ID": {
-      "type": "uid"
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
